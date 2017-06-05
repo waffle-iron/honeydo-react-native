@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 
-import ListsScreen from '../screens/ListsScreen';
+import ListsStack from '../navigation/ListsStack';
 import MeScreen from '../screens/MeScreen';
 
 const RootNavigation = TabNavigator({
   Lists: {
     name: 'Lists',
-    screen: ListsScreen,
+    screen: ListsStack,
     navigationOptions: {
       title: 'Lists',
       tabBarLabel: 'Lists',
