@@ -17,6 +17,7 @@ while (i < 20) {
   while (j < 5) {
     const username = internet.userName();
     const item = {
+      id: misc.uuid(),
       text: lorem.sentence(),
       username,
       created_at: date.recent(),

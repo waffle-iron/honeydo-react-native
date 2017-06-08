@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import {
+  View,
+  Text ,
+  StatusBar,
+} from 'react-native';
 import { inject, observer } from 'mobx-react/native';
 import {
   Container,
-  Header,
-  Title,
+  // Header,
+  // Title,
   Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
+  // Footer,
+  // FooterTab,
+  // Button,
+  // Left,
+  // Right,
+  // Body,
+  // Icon,
   List,
   ListItem,
 } from 'native-base';
-
 
 @inject('lists') @observer
 export default class Lists extends Component {
@@ -27,15 +30,8 @@ export default class Lists extends Component {
   render() {
     const { lists } = this.props.lists;
 
-    console.log('first list', lists[0]);
-
     return (
       <Container>
-        <Header>
-          <Body>
-            <Title>Lists</Title>
-          </Body>
-        </Header>
         <Content>
           <List>
             {

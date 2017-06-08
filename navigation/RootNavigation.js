@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 
@@ -12,7 +12,7 @@ const RootNavigation = TabNavigator({
     navigationOptions: {
       title: 'Lists',
       tabBarLabel: 'Lists',
-      tabBarIcon: ({ tintColor }) => <Icon name="ios-list" style={ { color: tintColor} } />,
+      tabBarIcon: ({ tintColor }) => <Icon name="ios-list" style={ { color: tintColor } } />,
     },
   },
   Me: {
@@ -26,7 +26,8 @@ const RootNavigation = TabNavigator({
   },
 }, {
   initialRouteName: 'Lists',
-  // headerMode: 'screen',
+  lazy: true,
+  animationEnabled: true,
 });
 
 export default RootNavigation;

@@ -11,8 +11,8 @@ import { StackNavigator } from 'react-navigation';
 import { Provider } from 'mobx-react/native';
 import { StyleProvider } from 'native-base';
 import getTheme from './native-base-theme/components';
-// going with material for now
-import material from './native-base-theme/variables/material';
+// going with platform for now
+import platform from './native-base-theme/variables/platform';
 
 import styles from './styles/AppContainer';
 import RootNavigation from './navigation/RootNavigation';
@@ -105,7 +105,7 @@ class AppContainer extends React.Component {
     if (this.state.appIsReady) {
       return (
         <Provider { ...stores }>
-          <StyleProvider style={ getTheme(material) }>
+          <StyleProvider style={ getTheme(platform) }>
             <AppNavigator style={ styles.container } />
           </StyleProvider>
         </Provider>

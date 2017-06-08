@@ -10,6 +10,8 @@ const ListsStack = StackNavigator({
     screen: ListsScreen,
     navigationOptions: {
       title: 'Lists',
+      // prevent header from being pulled down to show login view
+      gesturesEnabled: false,
     },
   },
   ListDetail: {
