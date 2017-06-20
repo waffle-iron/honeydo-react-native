@@ -19,6 +19,11 @@ const ListsStack = StackNavigator({
     screen: ListDetail,
     navigationOptions: ({ navigation }) => ({
       title: `${navigation.state.params.name}`,
+      // makes the back button orange and the title almost black
+      headerTintColor: '#F26419',
+      headerTitleStyle: {
+        color: null,
+      },
     }),
   },
 });

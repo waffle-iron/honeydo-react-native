@@ -110,13 +110,12 @@ export default {
     // Card
   cardDefaultBg: '#fff',
 
-
-      // Color
-  brandPrimary: '#3F51B5',
-  brandInfo: '#3F57D3',
-  brandSuccess: '#5cb85c',
+    // Color
+  brandPrimary: '#F26419',
+  brandInfo: '#2F4858',
+  brandSuccess: '#33658A',
   brandDanger: '#d9534f',
-  brandWarning: '#f0ad4e',
+  brandWarning: '#F6AE2D',
   brandSidebar: '#252932',
 
 

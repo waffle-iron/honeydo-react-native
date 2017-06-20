@@ -25,9 +25,12 @@ const RootNavigation = TabNavigator({
     },
   },
 }, {
-  initialRouteName: 'Lists',
-  lazy: true,
-  animationEnabled: true,
+  tabBarOptions: {
+    initialRouteName: 'Lists',
+    lazy: true,
+    animationEnabled: true,
+    activeTintColor: '#F26419',
+  }
 });
 
 export default RootNavigation;

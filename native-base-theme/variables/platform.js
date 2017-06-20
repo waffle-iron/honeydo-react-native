@@ -111,12 +111,12 @@ export default {
   cardDefaultBg: '#fff',
 
 
-      // Color
-  brandPrimary: (platform === 'ios') ? '#007aff' : '#3F51B5',
-  brandInfo: '#62B1F6',
-  brandSuccess: '#5cb85c',
+    // Color
+  brandPrimary: '#F26419',
+  brandInfo: '#2F4858',
+  brandSuccess: '#33658A',
   brandDanger: '#d9534f',
-  brandWarning: '#f0ad4e',
+  brandWarning: '#F6AE2D',
   brandSidebar: '#252932',
 
 

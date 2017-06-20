@@ -1,4 +1,5 @@
 import { observable, action, computed } from 'mobx';
+import _ from 'lodash';
 import Fakerator from 'fakerator';
 
 const { lorem, internet, date, names, misc } = Fakerator();
@@ -40,6 +41,19 @@ while (i < 20) {
 class Lists {
   @observable lists = testLists;
   @observable listsObj = testListsObj;
+
+  @action async fetchLists() {
+    await setTimeout( () => this.lists, 3000)
+  }
+
+  @action toggleCompleted(listId, itemId) {
+    const listIndex = _.findIndex(this.lists, list => _.isEqual(list.id, listId));
+    console.log('listIndex', listIndex);
+    console.log('this.lists.keys', Object.keys(this.lists[listIndex]));
+    const itemIndex = _.findIndex(this.lists[listIndex].items, task => _.isEqual(task.id, itemId));
+    console.log('itemIndex', itemIndex);
+    this.lists[listIndex].items[itemIndex].isCompleted = !this.lists[listIndex].items[itemIndex].isCompleted
+  }
 };
 
 export default new Lists();

@@ -60,7 +60,7 @@ export default class LoginScreen extends Component {
   render() {
     return (
       <Container>
-        <Content contentContainerStyle={ { alignItems: 'center', justifyContent: 'center', flex: 1 } }>
+        <Content padder contentContainerStyle={ { alignItems: 'center', justifyContent: 'center', flex: 1 } }>
           {/* <View>
               <Image
                 style={ {
@@ -79,7 +79,7 @@ export default class LoginScreen extends Component {
                 value={ this.state.username } />
             </Item>
             <Item floatingLabel style={ { marginBottom: 36 } }>
-              <Label style={ { color: 'rgb(138, 138, 138)'} }>Password</Label>
+              <Label style={ { color: 'rgb(138, 138, 138)'} }>password</Label>
               <Input
                 secureTextEntry={ true }
                 onChangeText={ password => this.setState({ password }) }
@@ -100,18 +100,17 @@ export default class LoginScreen extends Component {
             >
               <Text>Forgot Password?</Text>
             </Button>
-        </Content>
-         <Footer>
-              <FooterTab>
-                <Button
-                  primary
-                  full
-                  onPress={ () => console.log('create account')}
+            <View style={ { position: 'absolute', bottom: 0, right: 0, left: 0, alignItems: 'center', justifyContent: 'center' } }>
+              <Button
+                primary
+                transparent
+                full
+                onPress={ () => console.log('create account')}
                 >
-                  <Text style={ { color: 'white', fontSize: 16 } }>Need to Create An Account?</Text>
+                  <Text>Need to Create An Account?</Text>
                 </Button>
-              </FooterTab>
-            </Footer>
+            </View>
+        </Content>
       </Container>
     );
   }
