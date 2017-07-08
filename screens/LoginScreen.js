@@ -39,6 +39,7 @@ export default class LoginScreen extends Component {
 
   // LEFT OFF HERE: figure out why navigating to the root nav is not working on successful login
   componentWillMount() {
+    console.log('mounting', Object.keys(this.props.auth))
     // if user is logged in, push them into app
     if (this.props.auth.isAuthenticated) {
       console.log('Object.keys(this.props)', Object.keys(this.props));
@@ -47,19 +48,32 @@ export default class LoginScreen extends Component {
       this.props.navigation.navigate('rootNavigation');
     }
   }
-  // mobx lifecyle hook
+
   componentWillReact() {
+    console.log('this.props.auth.isAuthenticated', this.props.auth.isAuthenticated);
+        
     if (this.props.auth.isAuthenticated) {
-      console.log('Object.keys(this.props)', Object.keys(this.props));
-      console.log('we should be going to lists')
-      
-      this.props.navigation.navigate('rootNavigation');
+      console.log('navigation', Object.keys(this.props.navigation));
+            
+      this.props.navigation.navigate('RootNavigation');
+    }
+
+    const { message } = this.props.notifications;
+    if (!!message) {
+      const { text, duration, type } = message;
+      Toast.show({
+        text,
+        duration,
+        type,
+      });
     }
   }
 
   async _submit() {
     const { username, email, password, isRegistering } = this.state;
     const { register, login } = this.props.auth;
+    console.log('auth keys', Object.keys(this.props.auth));
+    
     // show spinner
     this.setState({ isFetching: true });
     
@@ -91,17 +105,7 @@ export default class LoginScreen extends Component {
     }
   }
 
-  componentWillReact() {
-    const { message } = this.props.notifications;
-    if (!!message) {
-      const { text, duration, type } = message;
-      Toast.show({
-        text,
-        duration,
-        type,
-      });
-    }
-  }
+  
 
   navigate() {
     this.props.navigation.navigate('RootNavigation');

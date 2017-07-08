@@ -50,8 +50,10 @@ export default class RootNavigation extends Component {
     const { isAuthenticated } = this.props.auth;
     console.log('isAuthenticated', isAuthenticated);
     
-    <Container>
-      <Navigator />
-    </Container>
+    return (
+      <Container>
+        <Navigator />
+      </Container>
+    );
   }
 };

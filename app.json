@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "honeydo-react-native",
+    "description": "An empty new project",
+    "slug": "honeydo-react-native",
+    "privacy": "public",
+    "sdkVersion": "18.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "icon": "./assets/icons/honey-do-icon.png",
+    "loading": {
+      "icon": "./assets/icons/honey-do-icon.png",
+      "hideExponentText": true
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
