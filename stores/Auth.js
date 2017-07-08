@@ -14,12 +14,10 @@ class Auth {
 
   @action async register(user) {
     try {
-      console.log('user hello', user);
-      
       const res = await fetch(`${config.honeyDoAPI}/register`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ user }),
       }).then(r => r.json()).catch(e => e);
@@ -41,7 +39,7 @@ class Auth {
       return null;
     } catch(e) {
       console.log('Err - Register', e);
-      return;
+      return e;
     }
   }
 

@@ -1,5 +1,5 @@
 import Expo from 'expo';
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Platform,
   StatusBar,
@@ -14,7 +14,7 @@ import getTheme from './native-base-theme/components';
 // going with platform for now
 import platform from './native-base-theme/variables/platform';
 
-import styles from './styles/AppContainer';
+import styles from './styles/App';
 import RootNavigation from './navigation/RootNavigation';
 import LoginScreen from './screens/LoginScreen';
 import stores from './stores';
@@ -50,7 +50,7 @@ const AppNavigator = StackNavigator({
   mode: iOS ? 'modal' : 'card',
 });
 
-class AppContainer extends React.Component {
+export default class App extends Component {
   state = {
     appIsReady: false,
   };
@@ -115,5 +115,3 @@ class AppContainer extends React.Component {
     }
   }
 }
-
-Expo.registerRootComponent(AppContainer);
